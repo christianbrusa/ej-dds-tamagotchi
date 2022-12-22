@@ -74,7 +74,7 @@ class Mal_humor implements IEstado {
     }
 
     jugar(mascota: Tamagotchi) {
-
+        mascota.setEstado(new Contenta(0));
     }
 
 }
