@@ -62,3 +62,19 @@ class Hambrienta implements IEstado {
     }
 
 }
+
+class Mal_humor implements IEstado {
+
+    constructor(tiempoDeMalHumor: number) {
+        this.tiempoDeMalHumor = tiempoDeMalHumor;
+    }
+
+    comer(mascota: Tamagotchi) {
+        
+    }
+
+    jugar(mascota: Tamagotchi) {
+
+    }
+
+}
