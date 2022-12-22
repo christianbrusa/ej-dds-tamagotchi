@@ -1,8 +1,10 @@
+const moment = require('moment');
+
 class Tamagotchi {
 
     constructor(private estado: IEstado) {
     }
-
+    
     setEstado(estado: IEstado) {
         this.estado = estado;
     }
@@ -65,12 +67,11 @@ class Hambrienta implements IEstado {
 
 class Mal_humor implements IEstado {
 
-    constructor(tiempoDeMalHumor: number) {
-        this.tiempoDeMalHumor = tiempoDeMalHumor;
+    constructor(fechaInicial: Object) {
+        this.fechaInicial = moment().format();
     }
 
     comer(mascota: Tamagotchi) {
-
     }
 
     jugar(mascota: Tamagotchi) {
