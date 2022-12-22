@@ -20,3 +20,11 @@ class Tamagotchi {
     }
 
 }
+
+interface IEstado {
+
+    comer(mascota: Tamagotchi): void
+    puedeJugar(mascota: Tamagotchi): void
+    jugar(mascota: Tamagotchi): void
+
+}
