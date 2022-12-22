@@ -39,8 +39,14 @@ class Contenta implements IEstado {
         this.nivelDeContenta += 1;
     }
 
+    contador = 0;
     jugar(mascota: Tamagotchi) {
-
+        this.contador += 1;
+        if (this.contador >= 5) {
+            mascota.setEstado(new Hambrienta());
+        } else {
+            this.nivelDeContenta += 2;
+        }
     }
 
 }
