@@ -28,3 +28,19 @@ interface IEstado {
     jugar(mascota: Tamagotchi): void
 
 }
+
+class Contenta implements IEstado {
+
+    constructor(nivelDeContenta: number) {
+        this.nivelDeContenta = nivelDeContenta;
+    }
+
+    comer(mascota: Tamagotchi) {
+
+    }
+
+    jugar(mascota: Tamagotchi) {
+        
+    }
+
+}
