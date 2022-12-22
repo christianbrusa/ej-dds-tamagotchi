@@ -36,11 +36,11 @@ class Contenta implements IEstado {
     }
 
     comer(mascota: Tamagotchi) {
-
+        this.nivelDeContenta += 1;
     }
 
     jugar(mascota: Tamagotchi) {
-        
+
     }
 
 }
