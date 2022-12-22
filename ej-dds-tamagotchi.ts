@@ -70,8 +70,14 @@ class Mal_humor implements IEstado {
     constructor(fechaInicial: Object) {
         this.fechaInicial = moment().format();
     }
-
+    
+    limiteDeMinutos = 80;
     comer(mascota: Tamagotchi) {
+      let fechaActual = moment().format();
+      let minutosConEstadoActual = moment(fechaActual).diff(this.fechaInicial, "minutes");
+      if(minutosConEstadoActual > this.limiteDeMinutos){
+        mascota.setEstado(new Contenta(0));
+      }
     }
 
     jugar(mascota: Tamagotchi) {
