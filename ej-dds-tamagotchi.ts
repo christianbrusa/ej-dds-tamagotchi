@@ -48,11 +48,11 @@ class Contenta implements IEstado {
 class Hambrienta implements IEstado {
 
     comer(mascota: Tamagotchi) {
-
+        mascota.setEstado(new Contenta(0));
     }
 
     jugar(mascota: Tamagotchi) {
-        
+
     }
 
 }
