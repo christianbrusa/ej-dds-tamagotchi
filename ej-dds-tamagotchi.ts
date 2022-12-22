@@ -44,3 +44,15 @@ class Contenta implements IEstado {
     }
 
 }
+
+class Hambrienta implements IEstado {
+
+    comer(mascota: Tamagotchi) {
+
+    }
+
+    jugar(mascota: Tamagotchi) {
+        
+    }
+
+}
