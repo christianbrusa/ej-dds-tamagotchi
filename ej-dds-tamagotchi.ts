@@ -58,7 +58,7 @@ class Hambrienta implements IEstado {
     }
 
     jugar(mascota: Tamagotchi) {
-
+        mascota.setEstado(new Mal_humor(0));
     }
 
 }
@@ -70,7 +70,7 @@ class Mal_humor implements IEstado {
     }
 
     comer(mascota: Tamagotchi) {
-        
+
     }
 
     jugar(mascota: Tamagotchi) {
