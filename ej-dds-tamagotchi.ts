@@ -33,12 +33,12 @@ interface IEstado {
 
 class Contenta implements IEstado {
 
-    constructor(nivelDeContenta: number) {
-        this.nivelDeContenta = nivelDeContenta;
+    constructor(nivel: Number) {
+        this.nivel = nivel;
     }
 
     comer(mascota: Tamagotchi) {
-        this.nivelDeContenta += 1;
+        this.nivel += 1;
     }
 
     contador = 0;
@@ -47,7 +47,7 @@ class Contenta implements IEstado {
         if (this.contador >= 5) {
             mascota.setEstado(new Hambrienta());
         } else {
-            this.nivelDeContenta += 2;
+            this.nivel += 2;
         }
     }
 
