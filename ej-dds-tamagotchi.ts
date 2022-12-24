@@ -14,7 +14,7 @@ class Tamagotchi {
     }
 
     puedeJugar() {
-        this.estado.puedeJugar(this);
+        return this.estado.puedeJugar(this);
     }
 
     jugar() {
@@ -26,7 +26,7 @@ class Tamagotchi {
 interface IEstado {
 
     comer(mascota: Tamagotchi): void
-    puedeJugar(mascota: Tamagotchi): void
+    puedeJugar(mascota: Tamagotchi): Boolean
     jugar(mascota: Tamagotchi): void
 
 }
@@ -40,6 +40,10 @@ class Contenta implements IEstado {
 
     comer(mascota: Tamagotchi) {
         this.nivel += 1;
+    }
+
+    puedeJugar(mascota: Tamagotchi){
+        return true;
     }
 
     jugar(mascota: Tamagotchi) {
@@ -57,6 +61,10 @@ class Hambrienta implements IEstado {
 
     comer(mascota: Tamagotchi) {
         mascota.setEstado(new Contenta(0));
+    }
+
+    puedeJugar(mascota: Tamagotchi){
+        return false;
     }
 
     jugar(mascota: Tamagotchi) {
@@ -78,6 +86,10 @@ class MalHumor implements IEstado {
       if(minutosConEstadoActual > this.limiteDeMinutos){
         mascota.setEstado(new Contenta(0));
       }
+    }
+
+    puedeJugar(mascota: Tamagotchi){
+        return true;
     }
 
     jugar(mascota: Tamagotchi) {
