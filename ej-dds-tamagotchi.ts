@@ -35,16 +35,16 @@ class Contenta implements IEstado {
 
     constructor(nivel: Number) {
         this.nivel = nivel;
+        this.vecesJugadas = 0;
     }
 
     comer(mascota: Tamagotchi) {
         this.nivel += 1;
     }
 
-    contador = 0;
     jugar(mascota: Tamagotchi) {
-        this.contador += 1;
-        if (this.contador >= 5) {
+        this.vecesJugadas += 1;
+        if (this.vecesJugadas >= 5) {
             mascota.setEstado(new Hambrienta());
         } else {
             this.nivel += 2;
