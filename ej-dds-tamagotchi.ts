@@ -60,12 +60,12 @@ class Hambrienta implements IEstado {
     }
 
     jugar(mascota: Tamagotchi) {
-        mascota.setEstado(new Mal_humor(0));
+        mascota.setEstado(new MalHumor(0));
     }
 
 }
 
-class Mal_humor implements IEstado {
+class MalHumor implements IEstado {
 
     constructor(fechaInicial: Object) {
         this.fechaInicial = moment().format();
