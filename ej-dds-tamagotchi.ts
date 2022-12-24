@@ -67,14 +67,14 @@ class Hambrienta implements IEstado {
 
 class MalHumor implements IEstado {
 
-    constructor(fechaInicial: Object) {
-        this.fechaInicial = moment().format();
+    constructor() {
+        this.fechaInicial = moment();
+        this.limiteDeMinutos = 80;
     }
-    
-    limiteDeMinutos = 80;
+
     comer(mascota: Tamagotchi) {
-      let fechaActual = moment().format();
-      let minutosConEstadoActual = moment(fechaActual).diff(this.fechaInicial, "minutes");
+      let fechaActual = moment();
+      let minutosConEstadoActual = fechaActual.diff(this.fechaInicial, "minutes");
       if(minutosConEstadoActual > this.limiteDeMinutos){
         mascota.setEstado(new Contenta(0));
       }
@@ -83,5 +83,4 @@ class MalHumor implements IEstado {
     jugar(mascota: Tamagotchi) {
         mascota.setEstado(new Contenta(0));
     }
-
 }
